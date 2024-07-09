@@ -42,7 +42,7 @@ After installation, you need to configure the ApiCheck module in your Magento 2 
 Once configured, the ApiCheck module will automatically validate addresses entered by your customers during checkout. Invalid addresses will prompt the user to correct them, ensuring accurate shipping information.
 
 ## Support
-For any issues or questions regarding the ApiCheck module, please refer to the [ApiCheck support page](https://apicheck.com/support) or contact support via the Magento Marketplace.
+For any issues or questions regarding the ApiCheck module, please refer to the [ApiCheck support page](https://apicheck.nl/contact).
 
 ## License
 This module is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
