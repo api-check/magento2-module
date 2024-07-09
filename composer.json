@@ -1,0 +1,19 @@
+{
+    "name": "apicheck/addressvalidation",
+    "description": "A Magento 2 module that adds address suggestions to the checkout",
+    "type": "magento2-module",
+    "version": "0.1.0",
+    "license": "OSL-3.0",
+    "require": {
+        "php": "^7.3|^8.1",
+        "magento/framework": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "ApiCheck\\AddressValidation\\": "app/code"
+        }
+    }
+}

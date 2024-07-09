@@ -1,0 +1,73 @@
+.address-suggestion-container {
+    position: relative;
+}
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 3px solid #6094db;
+    animation: spin 1s linear infinite;
+}
+
+#results {
+    max-height: 300px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.group-heading {
+    background-color: #f7f7f7;
+    color: #333;
+    font-weight: bold;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+
+    &:hover {
+        background-color: #e6e6e6;
+    }
+}
+
+.noaddressfoundmessage span {
+    padding: 10px;
+    background-color: #f44336;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 5px;
+    display: block;
+}
+
+#clearSearchButton {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

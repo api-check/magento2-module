@@ -1,0 +1,26 @@
+{
+    "BASE_URL": "https://api.apicheck.nl/",
+    "DEBOUNCE_DELAY": 500,
+    "AUTOCOMPLETE_COUNTRIES": [
+        "de",
+        "cz",
+        "fi",
+        "it",
+        "no",
+        "pl",
+        "pt",
+        "ro",
+        "es",
+        "ch",
+        "at",
+        "dk",
+        "gb",
+        "se",
+        "fr",
+        "be"
+    ],
+    "LOOKUP_COUNTRIES": [
+        "nl",
+        "lu"
+    ]
+}

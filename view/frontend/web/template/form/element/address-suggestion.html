@@ -1,0 +1,44 @@
+<div class="address-suggestion-container" data-bind="name: $parent.dataScope">
+    <input type="text"
+        data-bind="value: inputFieldValue, event: {input: handleInput}, hasFocus: focused, attr: { name: inputName }"
+        class="input-text" />
+    <button type="button" id="clearSearchButton" data-bind="visible: hasInput(), click: clearSearch">X</button>
+    <span class="spinner" id="loadingSpinner" data-bind="visible: hasInput() && suggestions().length === 0"></span>
+    <div id="results" class="suggestions" data-bind="visible: suggestions().length !== 0 && selectedNumber() === ''">
+        <!-- Street suggestions -->
+        <div class="streets"
+            data-bind="visible: hasInput() && suggestions().Streets && selectedStreet() === ''">
+            <div class="group-heading">Straten</div>
+            <div data-bind="foreach: suggestions().Streets">
+                <div class="suggestion-item"
+                    data-bind="text: text, attr: {'data-json-data': jsonData}, click: function() { $parent.selectStreetSuggestion(jsonData) }">
+                </div>
+            </div>
+        </div>
+
+        <!-- City suggestions -->
+        <div class="cities" data-bind="visible: hasInput() && hasSuggestions() === true && selectedCity() === ''">
+            <div class="group-heading">Steden</div>
+            <div data-bind="foreach: suggestions().Cities">
+                <div class="suggestion-item"
+                    data-bind="text: text, attr: {'data-json-data': jsonData}, click: function() { $parent.selectCitySuggestion(jsonData) }">
+                </div>
+            </div>
+        </div>
+
+        <!-- Address suggestions -->
+        <div class="addresses" data-bind="visible: hasInput() && suggestions().Residences && selectedNumber() === ''">
+            <div class="group-heading">Adressen</div>
+            <div data-bind="foreach: suggestions().Residences">
+                <div class="suggestion-item"
+                    data-bind="text: text, attr: {'data-json-data': jsonData}, click: function() { $parent.selectAddressSuggestion(jsonData) }">
+                </div>
+            </div>
+        </div>
+
+        <!-- No suggestions -->
+        <div class="no-suggestions group-heading" data-bind="visible: hasSuggestions() === false">
+            <span data-bind="i18n: 'No suggestions'"></span>
+        </div>
+    </div>
+</div>

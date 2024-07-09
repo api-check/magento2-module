@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="apicheck" translate="label" sortOrder="10">
+            <label>ApiCheck</label>
+        </tab>
+        <section id="apicheck_addressvalidation" translate="label" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>ApiCheck algemeen</label>
+            <tab>apicheck</tab>
+            <resource>ApiCheck_AddressValidation::config</resource>
+            <group id="settings" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>ApiCheck Algemene instellingen</label>
+                <field id="about" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>ApiCheck\AddressValidation\Block\About</frontend_model>
+                </field>
+                <field id="enable_api_check" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ApiCheck inschakelen</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Schakel alle functies van ApiCheck in/uit</comment>
+                </field>
+                <field id="api_key" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API-Key</label>
+                    <comment>Voer je ApiCheck Api-key in</comment>
+                    <frontend_model>ApiCheck\AddressValidation\Block\ApiKeyComment</frontend_model>
+                </field>
+            </group>
+        </section>
+
+        <!-- New section for "Adresvalidatie" -->
+        <section id="apicheck_addressvalidation_section" translate="label" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Adresvalidatie</label>
+            <tab>apicheck</tab>
+            <resource>ApiCheck_AddressValidation::config_addressvalidation</resource>
+            <group id="addressvalidation_settings" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Instellingen voor Adresvalidatie</label>
+                <field id="enable_addressvalidation" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Adresvalidatie inschakelen</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Schakel Adres validatie in/uit</comment>
+                </field>
+
+            </group>
+        </section>
+
+        <!-- New section for "Emailvalidatie" -->
+<!--         <section id="apicheck_emailvalidation_section" translate="label" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Emailvalidatie</label>
+            <tab>apicheck</tab>
+            <resource>ApiCheck_AddressValidation::config_emailvalidation</resource>
+            <group id="emailvalidation_settings" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Instellingen voor Emailvalidatie</label>
+                <field id="enable_emailvalidation" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Emailvalidatie inschakelen</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Schakel Email validatie in/uit</comment>
+                </field>
+            </group>
+        </section> -->
+    </system>
+</config>
