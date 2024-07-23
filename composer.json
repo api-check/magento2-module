@@ -2,7 +2,7 @@
     "name": "api-check/magento2-module",
     "description": "A Magento 2 module that adds address suggestions to the checkout",
     "type": "magento2-module",
-    "version": "v1.0.0",
+    "version": "master",
     "license": "OSL-3.0",
     "require": {
         "php": "^7.3|^8.1",
