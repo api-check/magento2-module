@@ -20,7 +20,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "ApiCheck\\AddressValidation\\": "app/code"
+            "ApiCheck\\AddressValidation\\": ""
         }
     }
 }
